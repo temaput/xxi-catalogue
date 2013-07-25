@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this is general schema for data exchange for preparing the catalog
+     mostly used for random edtis/exports in Excel
+     -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+    <xs:complexType name="unit">
+        <xs:sequence>
+            <xs:element name="заголовок" minOccurs="0"/>
+            <xs:element name="подзаголовок" minOccurs="0"/>
+            <xs:element name="автор" minOccurs="0"/>
+            <xs:element name="город" minOccurs="0"/>
+            <xs:element name="издательство" minOccurs="0"/>
+            <xs:element name="страниц" minOccurs="0"/>
+            <xs:element name="дополнительно" minOccurs="0"/>
+            <xs:element name="переплет" minOccurs="0"/>
+            <xs:element name="код" minOccurs="0"/>
+            <xs:element name="цена" minOccurs="0"/>
+            <xs:element name="аннотация" minOccurs="0"/>
+
+            <xs:element name="группа" minOccurs="0"/>
+            <xs:element name="тип" minOccurs="0"/>
+            <xs:element name="серия" minOccurs="0"/>
+
+            <xs:element name="рейтинг" minOccurs="0"/>
+            <xs:element name="скорость" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="Каталог">
+        <xs:annotation>
+            <xs:documentation>Схема для выгрузки данных в печатный каталог</xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="издание" maxOccurs="unbounded" type="unit"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>    
+
+
