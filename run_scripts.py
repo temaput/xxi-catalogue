@@ -29,33 +29,32 @@
 
 from lxml import etree
 
+
 def run(filename, topfile):
-    plainSource = etree.parse(filename)
+    plainSource = etree.parse(filename)  # first arg
     toNotSorted = etree.XSLT(etree.parse('xml/catalog-to-notsorted.xsl'))
-    toSorted  = etree.XSLT(etree.parse('xml/notsorted-sort.xsl'))
-    toICML  = etree.XSLT(etree.parse('xml/sorted-to-icml.xsl'))
+    toSorted = etree.XSLT(etree.parse('xml/notsorted-sort.xsl'))
+    toICML = etree.XSLT(etree.parse('xml/sorted-to-icml.xsl'))
 
     # this one we handle differently
     # need to insert topselect.xml inside
-    toTop  = etree.parse('xml/notsorted-to-top.xsl')
+    toTop = etree.parse('xml/notsorted-to-top.xsl')
     xsl = r'http://www.w3.org/1999/XSL/Transform'
     topSelVar = toTop.xpath(
             "//xsl:variable[@name='topSelection']", namespaces={'xsl': xsl}
-            )[0]
+            )[0]  # we need to redefine this var inside xsl
+    # it points now to the inside xml
     topSelVar.attrib['select'] = r"document('')/*/data:topselection/Каталог"
 
-    datans = r'http://classica21.ru/catalogue' 
+    datans = r'http://classica21.ru/catalogue'
     data = r'{http://classica21.ru/catalogue}'
     nsmap = {'data': datans}
     topSelElement = etree.SubElement(toTop.getroot(),
-            '%stopselection' % data, nsmap=nsmap)
+                '%stopselection' % data, nsmap=nsmap)
     topSelSource = etree.parse(topfile).getroot()
     from copy import deepcopy
+    # here we insert the data from seconf arg into xsl
     topSelElement.append(deepcopy(topSelSource))
-    with open('toTop.xsl', 'wb') as f:
-        toTop.write(f, pretty_print=True, 
-                xml_declaration=True, encoding='utf-8')
-
     toTop = etree.XSLT(toTop)
 
     # now everything is ready
@@ -68,17 +67,14 @@ def run(filename, topfile):
     with open('result/top.xml', 'wb') as topfile, \
             open('result/price.icml', 'wb') as icmlfile:
                 icml.write(icmlfile, xml_declaration=True,
-                        pretty_print=True, encoding='utf-8')
+                           pretty_print=True, encoding='utf-8')
                 from os.path import abspath
                 print("Price table generated in {}".format(
                     abspath(icmlfile.name)))
                 top.write(topfile, xml_declaration=True,
-                        pretty_print=True, encoding='utf-8') 
+                        pretty_print=True, encoding='utf-8')
                 print("Top data generated in {}".format(
                     abspath(topfile.name)))
-
-
-
 
 if __name__ == '__main__':
     import sys
