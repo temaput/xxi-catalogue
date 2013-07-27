@@ -15,8 +15,9 @@ resulting xml and icml are ready to be imported in inDesign layout
 
 python
 ------
-(under construction)
-should basicaly run all xsl scripts in given order
+run-script.py
+basicaly run all xsl scripts in given order
+takes raw xml source and topselection as 2 args
 
 1C
 --

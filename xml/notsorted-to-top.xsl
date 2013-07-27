@@ -21,7 +21,6 @@
     <xsl:output method="xml" indent="yes" encoding="utf-8"/>
     <xsl:key name="multivolume" match="издание" 
         use="translate(concat(заголовок, '+', автор),'&#160;&#x20;','')"/> 
-    <xsl:key name="inTop" match="издание" use="код"/>
     <xsl:key name="inSeries" match="sequence" use="attached/item"/>
     <xsl:key name="firstInSeries" match="sequence" use="first"/>
 
@@ -51,7 +50,7 @@
 
     <xsl:template match="издание" mode="route">
         <xsl:variable name="SKU" select="код"/>
-        <xsl:if test="$topSelection[key('inTop', $SKU)]">
+        <xsl:if test="$topSelection/издание[код=$SKU]">
             <xsl:choose>
                 <xsl:when 
                     test="count(key('multivolume', 
