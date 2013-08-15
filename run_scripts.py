@@ -29,12 +29,12 @@
 
 from lxml import etree
 
-
 def run(filename, topfile):
     plainSource = etree.parse(filename)  # first arg
     toNotSorted = etree.XSLT(etree.parse('xml/catalog-to-notsorted.xsl'))
     toSorted = etree.XSLT(etree.parse('xml/notsorted-sort.xsl'))
     toICML = etree.XSLT(etree.parse('xml/sorted-to-icml.xsl'))
+    check =  etree.XSLT(etree.parse('xml/check.xsl'))
 
     # this one we handle differently
     # need to insert topselect.xml inside
@@ -61,23 +61,30 @@ def run(filename, topfile):
     notSorted = toNotSorted(plainSource)
     icml = toICML(toSorted(notSorted))
     top = toTop(notSorted)
+    from os.path import abspath
+    report = check(icml, source="document('{}')/Каталог".format(abspath(filename)))
 
     from os import makedirs
     makedirs('result', exist_ok=True)
     with open('result/top.xml', 'wb') as topfile, \
-            open('result/price.icml', 'wb') as icmlfile:
+            open('result/price.icml', 'wb') as icmlfile, \
+            open('result/report.html', 'wb') as reportfile:
                 icml.write(icmlfile, xml_declaration=True,
                            pretty_print=True, encoding='utf-8')
-                from os.path import abspath
                 print("Price table generated in {}".format(
                     abspath(icmlfile.name)))
                 top.write(topfile, xml_declaration=True,
                         pretty_print=True, encoding='utf-8')
                 print("Top data generated in {}".format(
                     abspath(topfile.name)))
+                report.write(reportfile,
+                        pretty_print=True, encoding='utf-8')
+                print("Report generated in {}".format(
+                    abspath(reportfile.name)))
 
 if __name__ == '__main__':
     import sys
     if len(sys.argv) < 3:
         print (__doc__)
+        sys.exit(0)
     run(sys.argv[1], sys.argv[2])

@@ -30,18 +30,21 @@
             <subgroups>
                 <group>
                     <name>Сольфеджио, теория музыки</name>
-                    <included-groups>
-                        <groupdef>СОЛЬФЕДЖИО, ТЕОРИЯ МУЗЫКИ</groupdef>
-                    </included-groups>
-                    <included-types>
-                        <typedef>игровое пособие</typedef>
-                        <typedef>Книги</typedef>
-                        <typedef>Ноты</typedef>
-                        <typedef>Ноты + CD</typedef>
-                        <typedef>Плакаты, дипломы и прочее</typedef>
-                        <typedef>Учебники и учебные пособия</typedef>
-                    </included-types>
                     <subgroups>
+                        <group>
+                            <name>Учебники и учебные пособия</name>
+                            <included-groups>
+                                <groupdef>СОЛЬФЕДЖИО, ТЕОРИЯ МУЗЫКИ</groupdef>
+                            </included-groups>
+                            <included-types>
+                                <typedef>игровое пособие</typedef>
+                                <typedef>Книги</typedef>
+                                <typedef>Ноты</typedef>
+                                <typedef>Ноты + CD</typedef>
+                                <typedef>Плакаты, дипломы и прочее</typedef>
+                                <typedef>Учебники и учебные пособия</typedef>
+                            </included-types>
+                        </group>
                         <group>
                             <name>Рабочие тетради</name>
                             <included-groups>
@@ -60,6 +63,7 @@
                     </included-groups>
                     <included-types>
                         <typedef>Audio-CD</typedef>
+                        <typedef>MP3-CD</typedef>
                         <typedef>Учебники и учебные пособия</typedef>
                         <typedef>Ноты</typedef>
                         <typedef>Ноты + CD</typedef>
@@ -77,6 +81,15 @@
                                 <typedef>DVD-Video</typedef>
                                 <typedef>Книги</typedef>
                                 <typedef>Учебники и учебные пособия</typedef>
+                            </included-types>
+                        </group>
+                        <group>
+                            <name>Рабочие тетради</name>
+                            <included-groups>
+                                <groupdef>МУЗЫКАЛЬНАЯ ЛИТЕРАТУРА, ИСТОРИЯ МУЗЫКИ</groupdef>
+                            </included-groups>
+                            <included-types>
+                                <typedef>Рабочие тетради</typedef>
                             </included-types>
                         </group>
                         <group>
@@ -115,6 +128,8 @@
                         <typedef>игровое пособие</typedef>
                         <typedef>Книги</typedef>
                         <typedef>Ноты</typedef>
+                        <typedef>DVD-Video</typedef>
+                        <typedef>Учебные пособия + CD</typedef>
                         <typedef>Учебники и учебные пособия</typedef>
                     </included-types>
                     <subgroups>
@@ -159,6 +174,7 @@
             <included-types>
                 <typedef>Учебники и учебные пособия</typedef>
                 <typedef>Ноты</typedef>
+                <typedef>Книги</typedef>
             </included-types>
         </group>
         <group>
@@ -168,6 +184,7 @@
                 <groupdef>СИНТЕЗАТОР</groupdef>
                 <groupdef>СЛУШАНИЕ МУЗЫКИ</groupdef>
                 <groupdef>ФОРТЕПИАНО</groupdef>
+                <groupdef>ГИТАРА</groupdef>
                 <groupdef>ХОР</groupdef>
             </included-groups>
             <included-types>
@@ -180,7 +197,7 @@
                 <groupdef>ФОРТЕПИАНО</groupdef>
                 <groupdef>СОЛЬФЕДЖИО, ТЕОРИЯ МУЗЫКИ</groupdef>
                 <groupdef>ВОПРОСЫ МУЗЫКАЛЬНОГО ОБРАЗОВАНИЯ</groupdef>
-                <groupdef>АККОРДЕОН, БАЯН</groupdef>
+                <groupdef>БАЯН, АККОРДЕОН</groupdef>
                 <groupdef>ВОКАЛ</groupdef>
                 <groupdef>РАЗВИТИЕ ТВОРЧЕСКИХ СПОСОБНОСТЕЙ</groupdef>
                 <groupdef>СКРИПКА</groupdef>
@@ -240,6 +257,18 @@
                     </subgroups>
                 </group>
                 <group>
+                    <name>Подбор по слуху, импровизация, композиция</name>
+                    <included-groups>
+                        <groupdef>ПОДБОР ПО СЛУХУ, ИМПРОВИЗАЦИЯ, КОМПОЗИЦИЯ</groupdef>
+                    </included-groups>
+                    <included-types>
+                        <typedef>Ноты</typedef>
+                        <typedef>Учебники и учебные пособия</typedef>
+                        <typedef>игровое пособие</typedef>
+                        <typedef>Игровые пособия</typedef>
+                    </included-types>
+                </group>
+                <group>
                     <name>Фортепианные  ансамбли (в 4 руки, 2 ф-п.)</name>
                     <included-groups>
                         <groupdef>ФОРТЕПИАННЫЕ АНСАМБЛИ</groupdef>
@@ -287,9 +316,11 @@
                     <name>Балалайка</name>
                     <included-groups>
                         <groupdef>БАЛАЛАЙКА</groupdef>
+                        <groupdef>ДОМРА</groupdef>
                     </included-groups>
                     <included-types>
                         <typedef>Ноты</typedef>
+                        <typedef>Учебники и учебные пособия</typedef>
                     </included-types>
                 </group>
                 <group>
@@ -317,6 +348,7 @@
                     <included-groups>
                         <groupdef>ХОР</groupdef>
                         <groupdef>ВОКАЛ</groupdef>
+                        <groupdef>ПЕСНИ ДЛЯ ДЕТЕЙ</groupdef>
                     </included-groups>
                     <included-types>
                         <typedef>Ноты</typedef>
@@ -348,6 +380,7 @@
             <name>Книги о музыке и музыкантах</name>
             <included-groups>
                 <groupdef>КНИГИ О МУЗЫКЕ И МУЗЫКАНТАХ</groupdef>
+                <groupdef>ЭНЦИКЛОПЕДИИ, СЛОВАРИ, СПРАВОЧНИКИ</groupdef>
             </included-groups>
             <included-types>
                 <typedef>Книги</typedef>
