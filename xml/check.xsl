@@ -2,7 +2,7 @@
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
 
-    <xsl:output method="html" indent="yes" encoding="utf-8"/>
+    <xsl:output method="html" doctype-system="about:legacy-compat" indent="yes" encoding="utf-8"/>
     <xsl:key name="in-icml" match="XMLElement[@MarkupTag='XMLTag/код']"
         use="Content"/>
     <xsl:param name="source" select="document('data/catalog_full.xml')/Каталог"/>
@@ -11,7 +11,7 @@
     <xsl:template match="/">
         <html lang="ru">
             <head>
-                <meta charset="utf8"/>
+                <meta charset="utf-8"/>
                 <title>Пропущенные издания</title>
             </head>
             <body>

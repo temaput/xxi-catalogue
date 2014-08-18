@@ -26,6 +26,51 @@
         <!-- here we give the whole structure of the new catalog
              included groups types and series correspond to 1C -->
         <group>
+            <name>Учебно-методическая литература</name>
+            <included-groups>
+                <groupdef>ФОРТЕПИАНО</groupdef>
+                <groupdef>СОЛЬФЕДЖИО, ТЕОРИЯ МУЗЫКИ</groupdef>
+                <groupdef>ВОПРОСЫ МУЗЫКАЛЬНОГО ОБРАЗОВАНИЯ</groupdef>
+                <groupdef>БАЯН, АККОРДЕОН</groupdef>
+                <groupdef>ВОКАЛ</groupdef>
+                <groupdef>РАЗВИТИЕ ТВОРЧЕСКИХ СПОСОБНОСТЕЙ</groupdef>
+                <groupdef>СКРИПКА</groupdef>
+                <groupdef>ПЕДАГОГИКА</groupdef>
+                <groupdef>НОВОЕ ОБРАЗОВАНИЕ</groupdef>
+                <groupdef>КОМПЬЮТЕР ДЛЯ МУЗЫКАНТА</groupdef>
+            </included-groups>
+            <included-types>
+                <typedef>Методическая литература</typedef>
+                <typedef>Книги</typedef>
+            </included-types>
+        </group>
+        <group>
+            <name>Книги о музыке и музыкантах</name>
+            <included-groups>
+                <groupdef>КНИГИ О МУЗЫКЕ И МУЗЫКАНТАХ</groupdef>
+                <groupdef>ЭНЦИКЛОПЕДИИ, СЛОВАРИ, СПРАВОЧНИКИ</groupdef>
+            </included-groups>
+            <included-types>
+                <typedef>Книги</typedef>
+                <typedef>DVD-ROM</typedef>
+            </included-types>
+        </group>
+        <group>
+            <name>Учебные программы</name>
+            <included-groups>
+                <groupdef>РАЗВИТИЕ ТВОРЧЕСКИХ СПОСОБНОСТЕЙ</groupdef>
+                <groupdef>СИНТЕЗАТОР</groupdef>
+                <groupdef>СЛУШАНИЕ МУЗЫКИ</groupdef>
+                <groupdef>ФОРТЕПИАНО</groupdef>
+                <groupdef>ГИТАРА</groupdef>
+                <groupdef>БАЯН, АККОРДЕОН</groupdef>
+                <groupdef>ХОР</groupdef>
+            </included-groups>
+            <included-types>
+                <typedef>Учебные программы</typedef>
+            </included-types>
+        </group>
+        <group>
             <name>Учебные пособия</name>
             <subgroups>
                 <group>
@@ -70,10 +115,10 @@
                     </included-types>
                 </group>
                 <group>
-                    <name>Музыкальная литература, история музыки</name>
+                    <name>Музыкальная литература</name>
                     <subgroups>
                         <group>
-                            <name>Учебные пособия для ДМШ</name>
+                            <name>Учебные пособия</name>
                             <included-groups>
                                 <groupdef>МУЗЫКАЛЬНАЯ ЛИТЕРАТУРА, ИСТОРИЯ МУЗЫКИ</groupdef>
                             </included-groups>
@@ -93,17 +138,59 @@
                             </included-types>
                         </group>
                         <group>
-                            <name>Учебные пособия для муз. училищ</name>
+                            <name>Серия "Знакомство с шедеврами классики"</name>
                             <included-groups>
-                                <groupdef>УЧЕБНЫЕ ПОСОБИЯ ДЛЯ ССУЗОВ</groupdef>
+                                <groupdef>МУЗЫКАЛЬНАЯ ЛИТЕРАТУРА, ИСТОРИЯ МУЗЫКИ</groupdef>
                             </included-groups>
                             <included-types>
-                                <typedef>DVD-Video</typedef>
-                                <typedef>Книги</typedef>
                                 <typedef>Учебники и учебные пособия</typedef>
                             </included-types>
+                            <included-series>
+                                <seriesdef>Знакомство с шедеврами классики</seriesdef>
+                            </included-series>
+                        </group>
+                        <group>
+                            <name>Серия "Великие композиторы. Жизнь и творчество"</name>
+                            <included-groups>
+                                <groupdef>МУЗЫКАЛЬНАЯ ЛИТЕРАТУРА, ИСТОРИЯ МУЗЫКИ</groupdef>
+                            </included-groups>
+                            <included-types>
+                                <typedef>Книги</typedef>
+                            </included-types>
+                            <included-series>
+                                <seriesdef>Великие композиторы. Жизнь и творчество</seriesdef>
+                            </included-series>
                         </group>
                     </subgroups>
+                </group>
+                <group>
+                    <name>Клавиры</name>
+                    <included-groups>
+                        <groupdef>ОПЕРА</groupdef>
+                        <groupdef>ОПЕРЕТТА. МЮЗИКЛ</groupdef>
+                    </included-groups>
+                    <included-types>
+                        <typedef>Ноты (клавиры)</typedef>
+                        <typedef>Ноты</typedef>
+                    </included-types>
+                </group>
+                <group>
+                    <name>Оперы на DVD</name>
+                    <included-groups>
+                        <groupdef>ОПЕРА</groupdef>
+                    </included-groups>
+                    <included-types>
+                        <typedef>DVD-ROM</typedef>
+                    </included-types>
+                </group>
+                <group>
+                    <name>Балеты на DVD</name>
+                    <included-groups>
+                        <groupdef>БАЛЕТ</groupdef>
+                    </included-groups>
+                    <included-types>
+                        <typedef>DVD-ROM</typedef>
+                    </included-types>
                 </group>
                 <group>
                     <name>Ритмика</name>
@@ -118,48 +205,33 @@
                     </included-types>
                 </group>
                 <group>
-                    <name>Развитие творческих способностей</name>
+                    <name>Развитие музыкальных способностей</name>
                     <included-groups>
                         <groupdef>РАЗВИТИЕ ТВОРЧЕСКИХ СПОСОБНОСТЕЙ</groupdef>
-                        <groupdef>ЛИТЕРАТУРА ДЛЯ ДЕТСКИХ САДОВ И МЛАДШИХ КЛАССОВ ШКОЛ</groupdef>
+                        <groupdef>МУЗЫКА В ДЕТКСКОМ САДУ</groupdef>
                     </included-groups>
                     <included-types>
                         <typedef>Игровые пособия</typedef>
                         <typedef>игровое пособие</typedef>
                         <typedef>Книги</typedef>
                         <typedef>Ноты</typedef>
+                        <typedef>Audio-CD</typedef>
+                        <typedef>MP3-CD</typedef>
                         <typedef>DVD-Video</typedef>
                         <typedef>Учебные пособия + CD</typedef>
                         <typedef>Учебники и учебные пособия</typedef>
                     </included-types>
                     <subgroups>
                         <group>
-                            <name>серия компакт-дисков "Мой первый концерт. Классическая музыка для малышей"</name>
+                            <name>Серия "Теория и практика начального музыкально обучения"</name>
                             <included-groups>
                                 <groupdef>РАЗВИТИЕ ТВОРЧЕСКИХ СПОСОБНОСТЕЙ</groupdef>
-                                <groupdef>ЛИТЕРАТУРА ДЛЯ ДЕТСКИХ САДОВ И МЛАДШИХ КЛАССОВ ШКОЛ</groupdef>
                             </included-groups>
                             <included-types>
-                                <typedef>Audio-CD</typedef>
-                                <typedef>MP3-CD</typedef>
+                                <typedef>Учебники и учебные пособия</typedef>
                             </included-types>
                             <included-series>
-                                <seriesdef>Мой первый концерт</seriesdef>
-                                <seriesdef>Music Baby-1</seriesdef>
-                            </included-series>
-                        </group>
-                        <group>
-                            <name>серия компакт-дисков "Музыкальные развивайки с Плюхом"</name>
-                            <included-groups>
-                                <groupdef>РАЗВИТИЕ ТВОРЧЕСКИХ СПОСОБНОСТЕЙ</groupdef>
-                                <groupdef>ЛИТЕРАТУРА ДЛЯ ДЕТСКИХ САДОВ И МЛАДШИХ КЛАССОВ ШКОЛ</groupdef>
-                            </included-groups>
-                            <included-types>
-                                <typedef>Audio-CD</typedef>
-                                <typedef>MP3-CD</typedef>
-                            </included-types>
-                            <included-series>
-                                <seriesdef>Музыкальные развивайки с Плюхом</seriesdef>
+                                <seriesdef>Теория и практика начального музыкально обучения</seriesdef>
                             </included-series>
                         </group>
                     </subgroups>
@@ -174,46 +246,19 @@
             <included-types>
                 <typedef>Учебники и учебные пособия</typedef>
                 <typedef>Ноты</typedef>
+                <typedef>ноты</typedef>
                 <typedef>Книги</typedef>
             </included-types>
         </group>
         <group>
-            <name>Учебные программы</name>
+            <name>Детский музыкальный театр</name>
             <included-groups>
-                <groupdef>РАЗВИТИЕ ТВОРЧЕСКИХ СПОСОБНОСТЕЙ</groupdef>
-                <groupdef>СИНТЕЗАТОР</groupdef>
-                <groupdef>СЛУШАНИЕ МУЗЫКИ</groupdef>
-                <groupdef>ФОРТЕПИАНО</groupdef>
-                <groupdef>ГИТАРА</groupdef>
-                <groupdef>ХОР</groupdef>
+                <groupdef>ДЕТСКИЙ МУЗЫКАЛЬНЫЙ ТЕАТР</groupdef>
             </included-groups>
             <included-types>
-                <typedef>Учебные программы</typedef>
-            </included-types>
-        </group>
-        <group>
-            <name>Учебно-методическая литература</name>
-            <included-groups>
-                <groupdef>ФОРТЕПИАНО</groupdef>
-                <groupdef>СОЛЬФЕДЖИО, ТЕОРИЯ МУЗЫКИ</groupdef>
-                <groupdef>ВОПРОСЫ МУЗЫКАЛЬНОГО ОБРАЗОВАНИЯ</groupdef>
-                <groupdef>БАЯН, АККОРДЕОН</groupdef>
-                <groupdef>ВОКАЛ</groupdef>
-                <groupdef>РАЗВИТИЕ ТВОРЧЕСКИХ СПОСОБНОСТЕЙ</groupdef>
-                <groupdef>СКРИПКА</groupdef>
-            </included-groups>
-            <included-types>
-                <typedef>Методическая литература</typedef>
-            </included-types>
-        </group>
-        <group>
-            <name>Компьютер для музыканта</name>
-            <included-groups>
-                <groupdef>КОМПЬЮТЕР ДЛЯ МУЗЫКАНТА</groupdef>
-            </included-groups>
-            <included-types>
-                <typedef>DVD-Video</typedef>
-                <typedef>Книги</typedef>
+                <typedef>Ноты</typedef>
+                <typedef>Ноты + CD</typedef>
+                <typedef>ноты</typedef>
             </included-types>
         </group>
         <group>
@@ -246,6 +291,18 @@
                             </included-types>
                         </group>
                         <group>
+                            <name>Серия "Мастер-класс Александра Майкапара"</name>
+                            <included-groups>
+                                <groupdef>ФОРТЕПИАНО</groupdef>
+                            </included-groups>
+                            <included-types>
+                                <typedef>Ноты</typedef>
+                            </included-types>
+                            <included-series>
+                                <seriesdef>Мастер-класс Александра Майкапара</seriesdef>
+                            </included-series>
+                        </group>
+                        <group>
                             <name>Джаз за фортепиано</name>
                             <included-groups>
                                 <groupdef>ДЖАЗ</groupdef>
@@ -260,6 +317,7 @@
                     <name>Подбор по слуху, импровизация, композиция</name>
                     <included-groups>
                         <groupdef>ПОДБОР ПО СЛУХУ, ИМПРОВИЗАЦИЯ, КОМПОЗИЦИЯ</groupdef>
+                        <groupdef>ПОСОБИЯ ДЛЯ КОНЦЕРТМЕЙСТЕРОВ</groupdef>
                     </included-groups>
                     <included-types>
                         <typedef>Ноты</typedef>
@@ -272,6 +330,7 @@
                     <name>Фортепианные  ансамбли (в 4 руки, 2 ф-п.)</name>
                     <included-groups>
                         <groupdef>ФОРТЕПИАННЫЕ АНСАМБЛИ</groupdef>
+                        <groupdef>АНСАМБЛИ ДЛЯ ДВУХ ФОРТЕПИАНО</groupdef>
                         <groupdef>АНСАМБЛИ ДЛЯ ФОРТЕПИАНО В 4 РУКИ</groupdef>
                     </included-groups>
                     <included-types>
@@ -280,9 +339,19 @@
                     </included-types>
                 </group>
                 <group>
+                    <name>Синтезатор</name>
+                    <included-groups>
+                        <groupdef>СИНТЕЗАТОР</groupdef>
+                    </included-groups>
+                    <included-types>
+                        <typedef>Ноты</typedef>
+                    </included-types>
+                </group>
+                <group>
                     <name>Скрипка</name>
                     <included-groups>
                         <groupdef>СКРИПКА</groupdef>
+                        <groupdef>ВИОЛОНЧЕЛЬ</groupdef>
                     </included-groups>
                     <included-types>
                         <typedef>Ноты</typedef>
@@ -306,17 +375,20 @@
                     <name>Гитара</name>
                     <included-groups>
                         <groupdef>ГИТАРА</groupdef>
+                        <groupdef>ГИТАРНЫЕ АНСАМБЛИ</groupdef>
                     </included-groups>
                     <included-types>
+                        <typedef>Книги</typedef>
                         <typedef>Ноты</typedef>
                         <typedef>Учебники и учебные пособия</typedef>
                     </included-types>
                 </group>
                 <group>
-                    <name>Балалайка</name>
+                    <name>Домра / Балалайка</name>
                     <included-groups>
                         <groupdef>БАЛАЛАЙКА</groupdef>
                         <groupdef>ДОМРА</groupdef>
+                        <groupdef>ОРКЕСТРЫ И АНСАМБЛИ РУССКИХ НАРОДНЫХ ИНСТРУМЕНТОВ</groupdef>
                     </included-groups>
                     <included-types>
                         <typedef>Ноты</typedef>
@@ -358,6 +430,7 @@
                     <name>Хореография / Пособия для концертмейстеров</name>
                     <included-groups>
                         <groupdef>ХОРЕОГРАФИЯ</groupdef>
+                        <groupdef>БАЛЕТ</groupdef>
                     </included-groups>
                     <included-types>
                         <typedef>Книги</typedef>
@@ -365,47 +438,33 @@
                         <typedef>Учебники и учебные пособия</typedef>
                     </included-types>
                 </group>
+            </subgroups>
+        </group>
+        <group>
+            <name>Видео и аудио продукция</name>
+            <subgroups>
                 <group>
-                    <name>Клавиры</name>
+                    <name>Серия «Рус. исп. школа» на DVD</name> 
                     <included-groups>
-                        <groupdef>ОПЕРА</groupdef>
+                        <groupdef>ФОРТЕПИАНО</groupdef>
                     </included-groups>
                     <included-types>
-                        <typedef>Ноты (клавиры)</typedef>
+                        <typedef>DVD-ROM</typedef>
+                    </included-types>
+                </group>
+                <group>
+                    <name>Концерты выдающихся музыкантов в формате mp3</name> 
+                    <included-groups>
+                        <groupdef>ФОРТЕПИАНО</groupdef>
+                    </included-groups>
+                    <included-types>
+                        <typedef>MP3-CD</typedef>
                     </included-types>
                 </group>
             </subgroups>
         </group>
         <group>
-            <name>Книги о музыке и музыкантах</name>
-            <included-groups>
-                <groupdef>КНИГИ О МУЗЫКЕ И МУЗЫКАНТАХ</groupdef>
-                <groupdef>ЭНЦИКЛОПЕДИИ, СЛОВАРИ, СПРАВОЧНИКИ</groupdef>
-            </included-groups>
-            <included-types>
-                <typedef>Книги</typedef>
-            </included-types>
-        </group>
-        <group>
-            <name>Оперы на DVD</name>
-            <included-groups>
-                <groupdef>ОПЕРА</groupdef>
-            </included-groups>
-            <included-types>
-                <typedef>DVD-ROM</typedef>
-            </included-types>
-        </group>
-        <group>
-            <name>Балеты на DVD</name>
-            <included-groups>
-                <groupdef>БАЛЕТ</groupdef>
-            </included-groups>
-            <included-types>
-                <typedef>DVD-ROM</typedef>
-            </included-types>
-        </group>
-        <group>
-            <name>Пособия по изобразительному искусству</name>
+            <name>Изобразительное искусство</name>
             <included-groups>
                 <groupdef>ПОСОБИЯ ПО ИЗО</groupdef>
             </included-groups>
@@ -415,9 +474,19 @@
             </included-types>
         </group>
         <group>
-            <name>Пособия по детскому творчеству</name>
+            <name>Декоративно-прикладное творчество</name>
+            <included-groups>
+                <groupdef>ДОМАШНЕЕ ТВОРЧЕСТВО</groupdef>
+            </included-groups>
+            <included-types>
+                <typedef>Книги</typedef>
+            </included-types>
+        </group>
+        <group>
+            <name>Детское творчество</name>
             <included-groups>
                 <groupdef>ПОСОБИЯ ПО ДЕТСКОМУ ТВОРЧЕСТВУ</groupdef>
+                <groupdef>ОБЩЕРАЗВИВАЮЩАЯ ЛИТЕРАТУРА ДЛЯ ДЕТЕЙ</groupdef>
             </included-groups>
             <included-types>
                 <typedef>DVD-Video</typedef>
@@ -425,19 +494,21 @@
             </included-types>
         </group>
         <group>
-            <name>Менеджмент в сфере культуры / Социология культуры</name>
+            <name>Библиотека директора школы</name>
             <included-groups>
                 <groupdef>МЕНЕДЖМЕНТ В СФЕРЕ КУЛЬТУРЫ / ТВОРЧЕСКИЕ ИНДУСТРИИ</groupdef>
+                <groupdef>БИБЛИОТЕКА ДИРЕКТОРА ШКОЛЫ</groupdef>
             </included-groups>
             <included-types>
                 <typedef>Книги</typedef>
             </included-types>
         </group>
         <group>
-            <name>Оформление классов, подарки</name>
+            <name>Дневники / Оформление классов</name>
             <included-groups>
                 <groupdef>Сумки разные</groupdef>
                 <groupdef>Прочее</groupdef>
+                <groupdef>Канцтовары</groupdef>
                 <groupdef>ПОРТРЕТЫ КОМПОЗИТОРОВ</groupdef>
             </included-groups>
             <included-types>
@@ -457,6 +528,26 @@
             <first>2110</first>
             <attached>
                 <item>6787</item>
+            </attached>
+        </sequence>
+        <sequence>
+            <name>Мир музыки Первозванской. Учебники</name>
+            <first>1675</first>
+            <attached>
+                <item>1675</item>
+                <item>2616</item>
+                <item>2619</item>
+                <item>2623</item>
+            </attached>
+        </sequence>
+        <sequence>
+            <name>Мир музыки Первозванской. Рабочие тетради</name>
+            <first>1907</first>
+            <attached>
+                <item>1907</item>
+                <item>2614</item>
+                <item>2618</item>
+                <item>2622</item>
             </attached>
         </sequence>
         <sequence>
