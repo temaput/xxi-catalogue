@@ -38,6 +38,7 @@
                 <groupdef>ПЕДАГОГИКА</groupdef>
                 <groupdef>НОВОЕ ОБРАЗОВАНИЕ</groupdef>
                 <groupdef>КОМПЬЮТЕР ДЛЯ МУЗЫКАНТА</groupdef>
+                <groupdef>ПОСОБИЯ ПО ИЗО</groupdef>
             </included-groups>
             <included-types>
                 <typedef>Методическая литература</typedef>
@@ -52,6 +53,7 @@
             </included-groups>
             <included-types>
                 <typedef>Книги</typedef>
+                <typedef>Комплект (книга + СD)</typedef>
                 <typedef>DVD-ROM</typedef>
             </included-types>
         </group>
@@ -59,12 +61,16 @@
             <name>Учебные программы</name>
             <included-groups>
                 <groupdef>РАЗВИТИЕ ТВОРЧЕСКИХ СПОСОБНОСТЕЙ</groupdef>
+                <groupdef>ПОДБОР ПО СЛУХУ, ИМПРОВИЗАЦИЯ, КОМПОЗИЦИЯ</groupdef>
                 <groupdef>СИНТЕЗАТОР</groupdef>
                 <groupdef>СЛУШАНИЕ МУЗЫКИ</groupdef>
                 <groupdef>ФОРТЕПИАНО</groupdef>
                 <groupdef>ГИТАРА</groupdef>
                 <groupdef>БАЯН, АККОРДЕОН</groupdef>
                 <groupdef>ХОР</groupdef>
+                <groupdef>БАЛАЛАЙКА</groupdef>
+                <groupdef>ДОМРА</groupdef>
+                <groupdef>ВОПРОСЫ МУЗЫКАЛЬНОГО ОБРАЗОВАНИЯ</groupdef>
             </included-groups>
             <included-types>
                 <typedef>Учебные программы</typedef>
@@ -124,7 +130,10 @@
                             </included-groups>
                             <included-types>
                                 <typedef>DVD-Video</typedef>
+                                <typedef>DVD-ROM</typedef>
                                 <typedef>Книги</typedef>
+                                <typedef>Ноты</typedef>
+                                <typedef>Учебные пособия + CD</typedef>
                                 <typedef>Учебники и учебные пособия</typedef>
                             </included-types>
                         </group>
@@ -208,12 +217,13 @@
                     <name>Развитие музыкальных способностей</name>
                     <included-groups>
                         <groupdef>РАЗВИТИЕ ТВОРЧЕСКИХ СПОСОБНОСТЕЙ</groupdef>
-                        <groupdef>МУЗЫКА В ДЕТКСКОМ САДУ</groupdef>
+                        <groupdef>МУЗЫКА В ДЕТСКОМ САДУ</groupdef>
                     </included-groups>
                     <included-types>
                         <typedef>Игровые пособия</typedef>
                         <typedef>игровое пособие</typedef>
                         <typedef>Книги</typedef>
+                        <typedef>Аудиокниги</typedef>
                         <typedef>Ноты</typedef>
                         <typedef>Audio-CD</typedef>
                         <typedef>MP3-CD</typedef>
@@ -288,6 +298,7 @@
                                 <typedef>Ноты</typedef>
                                 <typedef>Учебники и учебные пособия</typedef>
                                 <typedef>Ноты + CD</typedef>
+                                <typedef>Учебные пособия + DVD</typedef>
                             </included-types>
                         </group>
                         <group>
@@ -355,6 +366,7 @@
                     </included-groups>
                     <included-types>
                         <typedef>Ноты</typedef>
+                        <typedef>Учебники и учебные пособия</typedef>
                     </included-types>
                 </group>
                 <group>
@@ -380,6 +392,7 @@
                     <included-types>
                         <typedef>Книги</typedef>
                         <typedef>Ноты</typedef>
+                        <typedef>Ноты + CD</typedef>
                         <typedef>Учебники и учебные пособия</typedef>
                     </included-types>
                 </group>
@@ -424,6 +437,8 @@
                     </included-groups>
                     <included-types>
                         <typedef>Ноты</typedef>
+                        <typedef>Учебники и учебные пособия</typedef>
+                        <typedef>Учебные пособия + DVD</typedef>
                     </included-types>
                 </group>
                 <group>
@@ -434,6 +449,7 @@
                     </included-groups>
                     <included-types>
                         <typedef>Книги</typedef>
+                        <typedef>DVD-Video</typedef>
                         <typedef>Ноты</typedef>
                         <typedef>Учебники и учебные пособия</typedef>
                     </included-types>
@@ -470,13 +486,17 @@
             </included-groups>
             <included-types>
                 <typedef>DVD-Video</typedef>
+                <typedef>Учебные пособия + CD</typedef>
                 <typedef>Книги</typedef>
+                <typedef>Учебники и учебные пособия</typedef>
+                <typedef>Учебные пособия + DVD</typedef>
             </included-types>
         </group>
         <group>
             <name>Декоративно-прикладное творчество</name>
             <included-groups>
                 <groupdef>ДОМАШНЕЕ ТВОРЧЕСТВО</groupdef>
+                <groupdef>ДЕКОРАТИВНО-ПРИКЛАДНОЕ ТВОРЧЕСТВО</groupdef>
             </included-groups>
             <included-types>
                 <typedef>Книги</typedef>
@@ -513,6 +533,7 @@
             </included-groups>
             <included-types>
                 <typedef>Плакаты, дипломы и прочее</typedef>
+                <typedef>Плакаты, дипломы, грамоты</typedef>
                 <typedef>Сувенирная продукция</typedef>
             </included-types>
         </group>
@@ -534,7 +555,6 @@
             <name>Мир музыки Первозванской. Учебники</name>
             <first>1675</first>
             <attached>
-                <item>1675</item>
                 <item>2616</item>
                 <item>2619</item>
                 <item>2623</item>
@@ -544,7 +564,6 @@
             <name>Мир музыки Первозванской. Рабочие тетради</name>
             <first>1907</first>
             <attached>
-                <item>1907</item>
                 <item>2614</item>
                 <item>2618</item>
                 <item>2622</item>

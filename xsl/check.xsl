@@ -5,7 +5,7 @@
     <xsl:output method="html" doctype-system="about:legacy-compat" indent="yes" encoding="utf-8"/>
     <xsl:key name="in-icml" match="XMLElement[@MarkupTag='XMLTag/код']"
         use="Content"/>
-    <xsl:param name="source" select="document('data/catalog_full.xml')/Каталог"/>
+    <xsl:param name="source" select="document('../data/from_catalog_2014.xml')/Каталог"/>
     <xsl:variable name="target" select="/"/>
 
     <xsl:template match="/">
