@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!-- Get data from previous (edited) catalogue for uploading to 1C -->
 <xsl:stylesheet version="1.0"
-    xmlns="http://www.classica21.ru"
+    xmlns="http://www.classica21.ru/catalogue"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     xmlns:data="http://classica21.ru/catalogue" >
     <xsl:output method="xml" indent="yes" encoding="utf-8"/>
