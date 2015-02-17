@@ -1,11 +1,11 @@
 ﻿<xs:schema xmlns:tns="http://www.classica21.ru/catalogue" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.classica21.ru/catalogue" attributeFormDefault="unqualified" elementFormDefault="qualified">
-	<xs:element name="Каталог" type="tns:Каталог"/>
+	<xs:element name="каталог" type="tns:Каталог"/>
 	<xs:complexType name="Каталог">
 		<xs:sequence>
-			<xs:element name="издание" type="tns:издание" maxOccurs="unbounded"/>
+			<xs:element name="издание" type="tns:Издание" maxOccurs="unbounded"/>
 		</xs:sequence>
 	</xs:complexType>
-	<xs:complexType name="издание">
+	<xs:complexType name="Издание">
 		<xs:sequence>
 			<xs:element name="заголовок" type="xs:string" minOccurs="0"/>
 			<xs:element name="подзаголовок" type="xs:string" minOccurs="0"/>
@@ -21,6 +21,7 @@
 			<xs:element name="группа" type="xs:string" minOccurs="0"/>
 			<xs:element name="тип" type="xs:string" minOccurs="0"/>
 			<xs:element name="серия" type="xs:string" minOccurs="0"/>
+			<xs:element name="статус" type="xs:string" minOccurs="0"/>
 		</xs:sequence>
 	</xs:complexType>
 </xs:schema>
