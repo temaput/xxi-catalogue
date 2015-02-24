@@ -6,10 +6,12 @@
      -->
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:data="http://classica21.ru/catalogue" >
+    xmlns:s="http://classica21.ru/catalogue/structure" 
+    exclude-result-prefixes="s"
+    >
 
     <xsl:output method="xml" indent="yes" encoding="utf-8"/>
-    <xsl:key name="attached" match="издание" use="attached/item"/>
+    <xsl:key name="attached" match="издание" use="s:attached/s:item"/>
 
     <xsl:template match="/">
         <Каталог>
@@ -31,15 +33,24 @@
 
     <xsl:template match="издание">
         <xsl:if test="not(key('attached', код))">
-            <xsl:copy-of select="."/>
+            <издание>
+                <xsl:apply-templates select="*"/>
+            </издание>
             <xsl:if test="attached">
                 <xsl:for-each select="attached/item">
                     <xsl:variable name="index" select="."/>
-                    <xsl:copy-of
-                        select="//издание[код = $index]"/>
+                    <издание>
+                        <xsl:apply-templates select="//издание[код = $index]/*"/>
+                    </издание>
                 </xsl:for-each>
             </xsl:if>
         </xsl:if>
     </xsl:template>
+    <xsl:template match="издание/*">
+        <xsl:copy>
+            <xsl:value-of select="translate(normalize-space(.), '$','&#x2028;')"/>
+        </xsl:copy>
+    </xsl:template>
+    
 </xsl:stylesheet>
 

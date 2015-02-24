@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- Compares raw xml from 1C with the resulted icml file and finds
+     all missed books. -->
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" >
 
     <xsl:output method="html" doctype-system="about:legacy-compat" indent="yes" encoding="utf-8"/>
     <xsl:key name="in-icml" match="XMLElement[@MarkupTag='XMLTag/код']"
         use="Content"/>
-    <xsl:param name="source" select="document('../data/from_catalog_2014.xml')/Каталог"/>
+    <xsl:param name="source_file" select="'source_file.xml'"/>
+    <xsl:variable name="source" select="document($source_file)/Каталог"/>
     <xsl:variable name="target" select="/"/>
 
     <xsl:template match="/">
@@ -16,6 +19,11 @@
             </head>
             <body>
                 <h1>Пропущенные издания</h1>
+                <h2>Источник: <small><xsl:value-of select="$source_file"/></small></h2>
+                <h2>Количество изданий в источнике:  <small><xsl:value-of select="count($source/издание)"/></small></h2>
+                <h2>Количество изданий, попавших в верстку: <small> <xsl:value-of select="count(//XMLElement[@MarkupTag='XMLTag/код'])" />
+                </small></h2>
+
                 <table bordercolor="black" border="1px" cellspacing="0" cellpadding="4">
                     <thead>
                         <tr  bgcolor="#B0C4DE" align="center">
