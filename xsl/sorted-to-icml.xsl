@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- sorted-to-icml.xsl -->
 <!-- makes the ready to use icml wich is native indesign (incopy) format
      generates price with xml tags, table structure, styles ...
      run in last turn after notsorted-sort on sorted.xml

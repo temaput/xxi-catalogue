@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- notsorted-sort.xsl -->
 <!-- this one sorts structured price
      should run after catalog-to-notsorted before sorted-to-icml
      uses sequences embeded inside the units for custom ordering

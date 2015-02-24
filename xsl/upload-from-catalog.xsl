@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- upload-from-catalog.xsl -->
 <!-- Get data from previous (edited) catalogue for uploading to 1C -->
 <xsl:stylesheet version="1.0"
     xmlns="http://www.classica21.ru/catalogue"

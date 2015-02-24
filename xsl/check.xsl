@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!-- check.xsl -->
 <!-- Compares raw xml from 1C with the resulted icml file and finds
      all missed books. -->
 <xsl:stylesheet version="1.0"

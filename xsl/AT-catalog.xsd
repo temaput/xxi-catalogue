@@ -1,4 +1,6 @@
-﻿<xs:schema xmlns:tns="http://www.classica21.ru/catalogue" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.classica21.ru/catalogue" attributeFormDefault="unqualified" elementFormDefault="qualified">
+﻿<!-- AT-catalog.xsd -->
+<!-- Main schema for exchanging with classica21.ru printed catalogue -->
+<xs:schema xmlns:tns="http://www.classica21.ru/catalogue" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.classica21.ru/catalogue" attributeFormDefault="unqualified" elementFormDefault="qualified">
 	<xs:element name="каталог" type="tns:Каталог"/>
 	<xs:complexType name="Каталог">
 		<xs:sequence>
