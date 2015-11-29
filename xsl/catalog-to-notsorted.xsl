@@ -22,7 +22,7 @@
     <xsl:key name="by-series" match="издание" 
         use="concat(тип, '+', группа, '+', серия)"/>
 
-    <xsl:key name="sequences" match="s:sequence" use="first"/>
+    <xsl:key name="sequences" match="s:sequence" use="s:first"/>
     <xsl:key name="series" match="издание" use="серия"/>
 
     <xsl:param name="structure_doc" select="'structure.xml'"/>
@@ -139,41 +139,55 @@
         <xsl:param name="seriesName"/>
         <xsl:choose>
             <xsl:when test="$seriesName">
-                <xsl:apply-templates 
+                <xsl:apply-templates mode="copy"
                     select="key('by-series',
-                    concat($typeName, '+', $groupName, $seriesName))"/>
+                    concat($typeName, '+', $groupName, $seriesName))">
+                    <xsl:with-param name="currentSeriesName" select="$seriesName"/>
+                </xsl:apply-templates>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:apply-templates 
+                <xsl:apply-templates mode="check"
                     select="key('by-group', concat($typeName, '+', $groupName))">
                 </xsl:apply-templates>
             </xsl:otherwise>
         </xsl:choose>
     </xsl:template>
 
-    <xsl:template match="издание">
-        <xsl:copy>
-            <xsl:copy-of select="заголовок"/>
-            <xsl:copy-of select="подзаголовок"/>
-            <xsl:copy-of select="автор"/>
-            <xsl:copy-of select="город"/>
-            <xsl:copy-of select="издательство"/>
-            <xsl:copy-of select="страниц"/>
-            <xsl:copy-of select="дополнительно"/>
-            <xsl:copy-of select="переплет"/>
-            <xsl:copy-of select="код"/>
-            <xsl:copy-of select="цена"/>
-            <xsl:copy-of select="серия"/>
-            <xsl:variable name="annotation" select="аннотация"/>
-            <аннотация>
-                <xsl:value-of
-                    select="normalize-space(translate($annotation, '&#xA;&#xD;', ''))"/>
-            </аннотация>
-            <xsl:variable name="index" select="код"/>
-            <xsl:if test="$sequences/s:sequence[key('sequences', $index)]">
-                <xsl:copy-of 
-                    select="$sequences/s:sequence[count(. | key('sequences', $index))=1]/s:attached"/>
+    <xsl:template match="издание" mode="check">
+            <!-- not inside the series, lets check that it will go inside some series later to reduce doubling -->
+            <xsl:variable name="belongsToSeries" select="серия"/>
+            <xsl:if test="not($belongsToSeries)">
+                <xsl:apply-templates select="." mode="copy" />
             </xsl:if>
-        </xsl:copy>
+
+            <xsl:if test="$belongsToSeries and not($contents//s:seriesdef[. = $belongsToSeries])"> 
+                <xsl:apply-templates select="." mode="copy" />
+            </xsl:if>
+    </xsl:template>
+
+    <xsl:template match="издание" mode="copy">
+            <xsl:copy>
+                <xsl:copy-of select="заголовок"/>
+                <xsl:copy-of select="подзаголовок"/>
+                <xsl:copy-of select="автор"/>
+                <xsl:copy-of select="город"/>
+                <xsl:copy-of select="издательство"/>
+                <xsl:copy-of select="страниц"/>
+                <xsl:copy-of select="дополнительно"/>
+                <xsl:copy-of select="переплет"/>
+                <xsl:copy-of select="код"/>
+                <xsl:copy-of select="цена"/>
+                <xsl:copy-of select="серия"/>
+                <xsl:variable name="annotation" select="аннотация"/>
+                <аннотация>
+                    <xsl:value-of
+                        select="normalize-space(translate($annotation, '&#xA;&#xD;', ''))"/>
+                </аннотация>
+                <xsl:variable name="index" select="код"/>
+                <xsl:if test="$sequences/s:sequence[key('sequences', $index)]">
+                    <xsl:copy-of 
+                        select="$sequences/s:sequence[count(. | key('sequences', $index))=1]/s:attached"/>
+                </xsl:if>
+            </xsl:copy>
     </xsl:template>
 </xsl:stylesheet>

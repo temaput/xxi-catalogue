@@ -212,11 +212,11 @@
                                     <xsl:choose>
                                         <xsl:when 
                                             test="contains($cover, 'супер')">
-                                            <xsl:text>Твердый переплет, суперобл., </xsl:text>
+                                            <xsl:text>тв. пер., суперобл., </xsl:text>
                                         </xsl:when>
                                         <xsl:when
                                             test="contains($cover, 'переп')">
-                                            <xsl:text>Твердый переплет, </xsl:text>
+                                            <xsl:text>тв. пер., </xsl:text>
                                         </xsl:when>
                                     </xsl:choose>
                                 </Content>

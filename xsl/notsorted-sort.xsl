@@ -7,7 +7,7 @@
      -->
 <xsl:stylesheet version="1.0"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:s="http://classica21.ru/catalogue/structure" 
+    xmlns:s="http://www.classica21.ru/catalogue/structure" 
     exclude-result-prefixes="s"
     >
 
@@ -37,20 +37,20 @@
             <издание>
                 <xsl:apply-templates select="*"/>
             </издание>
-            <xsl:if test="attached">
-                <xsl:for-each select="attached/item">
+            <xsl:if test="s:attached">
+                <xsl:for-each select="s:attached/s:item">
                     <xsl:variable name="index" select="."/>
-                    <издание>
-                        <xsl:apply-templates select="//издание[код = $index]/*"/>
-                    </издание>
+                    <xsl:if test="//издание[код = $index]">
+                        <издание>
+                            <xsl:apply-templates select="//издание[код = $index]/*"/>
+                        </издание>
+                    </xsl:if>
                 </xsl:for-each>
             </xsl:if>
         </xsl:if>
     </xsl:template>
     <xsl:template match="издание/*">
-        <xsl:copy>
-            <xsl:value-of select="translate(normalize-space(.), '$','&#x2028;')"/>
-        </xsl:copy>
+        <xsl:copy-of select="."/>
     </xsl:template>
     
 </xsl:stylesheet>
